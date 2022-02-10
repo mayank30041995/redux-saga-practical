@@ -10,12 +10,18 @@
   "author": "Mayank Sharma",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "4.41.6",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.10.3"
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "babel-preset-es2015": "^6.24.1",
+    "bable-loader": "^0.0.1-security",
     "json-server": "^0.17.0",
     "mdb-react-ui-kit": "^1.2.0",
     "react": "^17.0.2",
