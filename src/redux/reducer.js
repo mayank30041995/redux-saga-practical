@@ -7,7 +7,7 @@ const initialState = {
 }
 
 const userReducer =( state= initialState , action) => {
-    switch(action.types) {
+    switch(action.type) {
         case types.LOAD_USERS_START : 
         return {
             ...state,

@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
 
-export const loadUserStart = () => ({
+export const loadUsersStart = () => ({
     type: types.LOAD_USERS_START
 });
 
