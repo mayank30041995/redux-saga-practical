@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector} from 'react-redux'
-import { useHistory, usePrams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useDispatch} from 'react-redux'
+import { useHistory } from 'react-router-dom';
 import { createUserStart } from '../redux/actions'
+
 
 
 const initialState = {
@@ -39,6 +40,7 @@ const AddEditUser = () => {
         <form onSubmit={handleSubmit}>
             <p>Add Users Details</p>
             <div>
+            <label>Name:</label>
                 <input
                     value={name || ""}
                     name="name"
@@ -50,6 +52,7 @@ const AddEditUser = () => {
                     invalid
                 />
                 <br />
+                <label>Email:</label>
                 <input
                     value={email || ""}
                     name="email"
@@ -61,6 +64,7 @@ const AddEditUser = () => {
                     invalid
                 />
                 <br />
+                <label>Phone:</label>
                 <input
                     value={phone || ""}
                     name="phone"
@@ -71,6 +75,8 @@ const AddEditUser = () => {
                     validation="Please provide a phone no."
                     invalid
                 />
+                <br />
+                <label>Address:</label>
                 <input
                     value={address || ""}
                     name="address"
@@ -84,7 +90,12 @@ const AddEditUser = () => {
                 <br />
                 <div>
                     <button type="submit">Add</button>
-                    <div onClick={() => history.push('/')}>Go Back</div>
+                    <br />
+                    <br />
+                    <br />
+                    <button>
+                    <div style={{color: 'green'}} onClick={() => history.push('/')}>Go Back</div>
+                    </button>
                 </div>
             </div>
         </form>
