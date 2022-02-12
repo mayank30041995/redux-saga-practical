@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector} from 'react-redux'
 import { useHistory, usePrams } from 'react-router-dom';
+import { createUserStart } from '../redux/actions'
 
 
 const initialState = {
@@ -16,11 +18,15 @@ const AddEditUser = () => {
     const { name, email, phone, address } = formValue;
     const history = useHistory();
 
+    const dispatch= useDispatch();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if(name && email && phone && address) {
-            console.warn(name, email, phone, address);
+             console.warn(name, email, phone, address);
+             dispatch(createUserStart(formValue));
         }
+        setTimeout(() => history.push('/'), 500)
     }
 
     const onInputChange = (e) => {
@@ -34,7 +40,7 @@ const AddEditUser = () => {
             <p>Add Users Details</p>
             <div>
                 <input
-                    value={""}
+                    value={name || ""}
                     name="name"
                     type="text"
                     onChange={onInputChange}
@@ -45,7 +51,7 @@ const AddEditUser = () => {
                 />
                 <br />
                 <input
-                    value={""}
+                    value={email || ""}
                     name="email"
                     type="email"
                     onChange={onInputChange}
@@ -56,7 +62,7 @@ const AddEditUser = () => {
                 />
                 <br />
                 <input
-                    value={""}
+                    value={phone || ""}
                     name="phone"
                     type="number"
                     onChange={onInputChange}
@@ -66,7 +72,7 @@ const AddEditUser = () => {
                     invalid
                 />
                 <input
-                    value={""}
+                    value={address || ""}
                     name="address"
                     type="text"
                     onChange={onInputChange}
