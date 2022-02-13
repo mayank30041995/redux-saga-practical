@@ -1,5 +1,7 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
 const About = () => {
+    const history = useHistory();
   return (
     <div>
       <p>
@@ -22,6 +24,9 @@ const About = () => {
         over the years, sometimes by accident, sometimes on purpose (injected
         humour and the like).
       </p>
+      <button>
+      <div style={{color: 'green'}} onClick={() => history.push('/')}>Go Back</div>
+      </button>
     </div>
   );
 };
