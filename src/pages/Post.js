@@ -14,16 +14,15 @@ const Post = () => {
     
     
     return(<div>
+        <h1>Post Page</h1>
         {(loading) ? <h1>loading</h1> : post?.map((item, index) =>(
             <tr key={index + 1}>
             <th  style={{color: '#FB2', padding: '2rem'}}>{index + 1}</th>
-            <td>{item.id}</td>
-            <td>{item.title}</td>
-            <td>{item.body}</td>
+            {/*  <td>{item.id}</td>*/}
+            <td style={{color: '#3B2', padding: '2rem'}}>{item.title}</td>
+            <td style={{color: '#D21', padding: '2rem', margin: '10rem'}}>{item.body}</td>
             </tr>
-          )) }
-       <h1>Post Page</h1>
-       
+          )) }      
         </div>
     )
 }

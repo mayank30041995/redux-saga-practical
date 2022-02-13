@@ -17,10 +17,10 @@ const Home = () => {
         {(loading) ? <h1>loading</h1> : users?.map((item, index) =>(
           <tr key={index + 1}>
           <th  style={{color: '#FB2', padding: '2rem'}}>{index + 1}</th>
-          <td>{item.name}</td>
-          <td>{item.email}</td>
-          <td>{item.phone}</td>
-          <td>{item.address}</td>
+          <td style={{color: '#D4A', padding: '2rem'}}>{item.name}</td>
+          <td style={{color: '#3B2', padding: '2rem'}}>{item.email}</td>
+          <td style={{color: '#BFBD2AD', padding: '2rem'}}>{item.phone}</td>
+          <td style={{color: '#ACAFBAC', padding: '2rem'}}>{item.address}</td>
           </tr>
         )) }
        <h1>Mayank Sharma</h1>
