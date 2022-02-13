@@ -10,8 +10,12 @@ const Header = () => {
             Home
         </NavLink>
   
-        <NavLink style={{color: '#FB2', padding: '2rem'}}to='/addUser' >
+        <NavLink style={{color: '#FB2', padding: '2rem'}} to='/addUser' >
             AddUser
+        </NavLink>
+
+        <NavLink style={{color: '#FB2', padding: '2rem'}} to='/about' >
+            About
         </NavLink>
 
     </>)
