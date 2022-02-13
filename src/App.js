@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './pages/Home';
+import Post from './pages/Post';
 import About from './pages/About';
 import AddEditUser from './pages/AddEditUser';
 import Header from './component/Header';
@@ -12,6 +13,7 @@ function App() {
         <div>
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/post" component={Post} />
                 <Route exact path="/addUser" component={AddEditUser} />
                 <Route exact path="/about" component={About} />
             </Switch>

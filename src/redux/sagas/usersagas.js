@@ -1,4 +1,4 @@
-import * as types from "./actionTypes";
+import * as types from "../actionTypes";
 
 import {
     take,
@@ -11,8 +11,8 @@ import {
     call,
 } from "redux-saga/effects";
 
-import * as action from './actions';
-import { loadUsersApi, createUserApi} from "./api";
+import * as action from '../actions';
+import { loadUsersApi, createUserApi} from "../api";
 
 function* onLoadUsersStartAsync() {
     try {
@@ -37,16 +37,11 @@ function* onCreateUserStartAsync({payload}) {
     }
 
 }
-function* onLoadUsers() {
+export function* onLoadUsers() {
     yield takeEvery(types.LOAD_USERS_START, onLoadUsersStartAsync);
 }
 
-function* onCreateUser() {
+export function* onCreateUser() {
     yield takeLatest(types.CREATE_USER_START, onCreateUserStartAsync);
 }
 
-const userSagas = [fork(onLoadUsers), fork(onCreateUser)];
-
-export default function* rootSaga() {
-    yield all([...userSagas]);
-}

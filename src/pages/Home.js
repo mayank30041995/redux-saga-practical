@@ -13,9 +13,9 @@ const Home = () => {
     },[])
     
     
-    return(<>
+    return(<div>
         {(loading) ? <h1>loading</h1> : users?.map((item, index) =>(
-          <tr>
+          <tr key={index + 1}>
           <th  style={{color: '#FB2', padding: '2rem'}}>{index + 1}</th>
           <td>{item.name}</td>
           <td>{item.email}</td>
@@ -25,7 +25,7 @@ const Home = () => {
         )) }
        <h1>Mayank Sharma</h1>
        
-        </>
+        </div>
     )
 }
 

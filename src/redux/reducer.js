@@ -2,6 +2,7 @@ import * as types from './actionTypes';
 
 const initialState = {
    users: [],
+   post: [],
    loading: false,
    error: null
 }
@@ -10,6 +11,7 @@ const userReducer =( state= initialState , action) => {
     switch(action.type) {
         case types.LOAD_USERS_START : 
         case types.CREATE_USER_START:
+        case types.LOAD_POST_DATA:
         return {
             ...state,
             loading:true
@@ -32,6 +34,18 @@ const userReducer =( state= initialState , action) => {
             loading:false
         }
         case types.CREATE_USER_ERROR : 
+        return {
+            ...state,
+            loading:false,
+            error: action.payload
+        }
+        case types.LOAD_POST_SUCCESS : 
+        return {
+            ...state,
+            loading:false,
+            post: action.payload
+        }
+        case types.LOAD_POST_ERROR :
         return {
             ...state,
             loading:false,

@@ -27,3 +27,18 @@ export const createUserError = (error) => ({
      type:types.CREATE_USER_ERROR,
      payload: error
 })
+
+
+export const loadPostsData = () => ({
+    type: types.LOAD_POST_DATA,
+})
+
+export const loadPostSuccess = (post) => ({
+    type: types.LOAD_POST_SUCCESS,
+    payload: post
+})
+
+export const loadPostError = (error) => ({
+    type: types.LOAD_POST_ERROR,
+    payload: error
+})

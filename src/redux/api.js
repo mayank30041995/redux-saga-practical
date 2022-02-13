@@ -5,3 +5,6 @@ export const loadUsersApi = async () =>
 
 export const createUserApi = async (user) =>
     await axios.post('http://localhost:5000/users', user);
+
+    export const loadPostApi = async () =>
+    await axios.get('https://jsonplaceholder.typicode.com/posts');
